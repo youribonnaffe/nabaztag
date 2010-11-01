@@ -18,7 +18,7 @@ public class TextSplitterUtil {
 				toInsert = "";
 			}
 		}
-		if (!toInsert.isEmpty()) {
+		if (toInsert.length() != 0) {
 			results.add(toInsert);
 		}
 		return results.toArray(new String[0]);

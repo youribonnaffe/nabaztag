@@ -13,6 +13,11 @@
 		<servlet-name>urlBuilder</servlet-name>
 		<servlet-class>com.appspot.ginkotag.web.URLBuilderServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>playFranceInter</servlet-name>
+		<servlet-class>com.appspot.ginkotag.web.PlayFranceInterServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>ginkoTimesWS</servlet-name>
@@ -22,6 +27,11 @@
 	<servlet-mapping>
 		<servlet-name>urlBuilder</servlet-name>
 		<url-pattern>/index.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>playFranceInter</servlet-name>
+		<url-pattern>/play_france_inter</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>

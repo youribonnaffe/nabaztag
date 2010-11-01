@@ -30,13 +30,11 @@ public class RealRabbitCommand implements IRabbitCommand {
 		this.textToSay = "";
 	}
 
-	@Override
 	public IRabbitCommand say(String text) {
 		textToSay += text;
 		return this;
 	}
 
-	@Override
 	public RabbitCommandResponse execute() {
 		try {
 			LOGGER.info("Sending command to real rabbit " + this);
@@ -80,19 +78,16 @@ public class RealRabbitCommand implements IRabbitCommand {
 		return inputStream;
 	}
 
-	@Override
 	public IRabbitCommand moveLeftEar(EarPosition earPosition) {
 		leftEarPosition = earPosition;
 		return this;
 	}
 
-	@Override
 	public IRabbitCommand moveRightEar(EarPosition earPosition) {
 		rightEarPosition = earPosition;
 		return this;
 	}
 
-	@Override
 	public EarPosition getLeftEarPosition() {
 		try {
 			LOGGER.info("Getting left ear position");
@@ -105,7 +100,6 @@ public class RealRabbitCommand implements IRabbitCommand {
 		return null;
 	}
 
-	@Override
 	public EarPosition getRightEarPosition() {
 		try {
 			LOGGER.info("Getting right ear position");
